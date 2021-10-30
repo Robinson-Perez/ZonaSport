@@ -1,0 +1,508 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <title>ZonaSport</title>
+
+  <!-- Mobile Specific Metas
+================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Favicon
+================================================== -->
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+  <!-- CSS
+================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+  <!-- Animation -->
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+  <!-- slick Carousel -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="{% static 'plugins/colorbox/colorbox.css' %}">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+  <div class="body-inner">
+
+    <div id="top-bar" class="top-bar">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-8">
+                <ul class="top-info text-center text-md-left">
+                    <li><i class="fas fa-map-marker-alt"></i> <p class="info-text">Kilómetro 236 Aldea Santa Irene San Antonio Sacatepéquez, Guatemala</p>
+                    </li>
+                </ul>
+              </div>
+              <!--/ Top info end -->
+  
+              <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+                <ul class="list-unstyled">
+                    <li>
+                      <a title="Facebook" href="https://facebbok.com">
+                          <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                      </a>
+                      <a title="Twitter" href="https://twitter.com">
+                          <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                      </a>
+                      <a title="Instagram" href="https://instagram.com">
+                          <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                      </a>
+                      <a title="Linkdin" href="https://github.com">
+                          <span class="social-icon"><i class="fab fa-github"></i></span>
+                      </a>
+                    </li>
+                </ul>
+              </div>
+              <!--/ Top social end -->
+          </div>
+          <!--/ Content row end -->
+        </div>
+        <!--/ Container end -->
+    </div>
+    <!--/ Topbar end -->
+<!-- Header start -->
+<header id="header" class="header-one">
+  <div class="bg-white">
+    <div class="container">
+      <div class="logo-area">
+          <div class="row align-items-center">
+            <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+               <img class="img" width="100%" src="{% static 'images/P.jpg' %}">
+                 
+                </div><!-- logo end -->
+  
+            <div class="col-lg-9 header-right">
+                <ul class="top-info-box">
+                  <li>
+                    <div class="info-box">
+                      <div class="info-box-content">
+                          <p class="info-box-title">LLámanos</p>
+                          <p class="info-box-subtitle"><a href="tel:(+502) 4447 8738">(+502) 4447 8738</a></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="info-box">
+                      <div class="info-box-content">
+                          <p class="info-box-title">Envíenos un correo electrónico</p>
+                          <p class="info-box-subtitle"><a href="zonasportsantairene@gmail.com">zonasportsantairene@gmail.com</a></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="last">
+                    <div class="info-box last">
+                      <div class="info-box-content">
+                          <p class="info-box-title">Horarios de atención</p>
+                          <p class="info-box-subtitle">08:00-21:00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'login' %}" class="nav-link">Iniciar Sesion</a>
+                    </li>
+                </ul><!-- Ul end -->
+            </div><!-- header right end -->
+          </div><!-- logo area end -->
+  
+      </div><!-- Row end -->
+    </div><!-- Container end -->
+  </div>
+
+  <div class="site-navigation">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav mr-auto">
+                      <li class="nav-item dropdown active">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Principal <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li class="nav-link"><a href="{% url 'home' %}">Inicio</a></li>
+                          </ul>
+                      </li>
+
+                                  
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Noticias <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="{% url 'noticias' %}">Lo mas reciente</a></li>
+                          </ul>
+                      </li>
+              
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="{% url 'deportivo' %}">Deportivos</a></li>
+                            <li><a href="{% url 'tienda' %}">Tienda</a></li>
+                          </ul>
+                      </li>
+              
+                                    
+                      <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contactanos</a></li>
+                    </ul>
+                </div>
+              </nav>
+          </div>
+          <!--/ Col end -->
+        </div>
+        <!--/ Row end -->
+
+        <div class="nav-search">
+          <span id="search"><i class="fa fa-search"></i></span>
+        </div><!-- Search end -->
+
+        <div class="search-block" style="display: none;">
+          <label for="search-field" class="w-100 mb-0">
+            <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
+          </label>
+          <span class="search-close">&times;</span>
+        </div><!-- Site search end -->
+    </div>
+    <!--/ Container end -->
+
+  </div>
+  <!--/ Navigation end -->
+</header>
+<!--/ Header end -->
+
+<div class="banner-carousel banner-carousel-1 mb-0">
+  <div class="banner-carousel-item" style="background-image:url(https://scontent.fgua6-1.fna.fbcdn.net/v/t1.6435-9/242917241_400602608119181_2559275549770395944_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=c6THPP8f2u8AX_0Tfc2&_nc_ht=scontent.fgua6-1.fna&oh=21ac1ea6733ad8834a5792fbdd27a619&oe=6181947A)">
+    <div class="slider-content">
+      <div class="container">
+        <div class="box-slider-content">
+          <div class="box-slider-text">
+              <h2 class="box-slide-title">"El lugar donde juegan futbol los mejores"</h2>
+              <h3 class="box-slide-sub-title">Ven a divertirte</h3>
+              <p class="box-slide-description">Y siéntete como un ganador</p>
+              <p>
+                <a class="slider btn btn-primary">Horarios disponibles</a>
+              </p>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="banner-carousel-item" style="background-image:url(https://scontent.fgua6-1.fna.fbcdn.net/v/t1.6435-9/198695203_336259654553477_7822939204833305639_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=rjjrBRVfH1cAX9lyj-f&_nc_ht=scontent.fgua6-1.fna&oh=6088340d3a172dea0294351268fb564c&oe=6182FD28)">
+    <div class="slider-content text-left">
+      <div class="container">
+        <div class="box-slider-content">
+            <div class="box-slider-text">
+              <h2 class="box-slide-title">Se parte de esta gran familia</h2>
+              <h3 class="box-slide-sub-title">Mientras mas juegas ganas</h3>
+              <p class="box-slide-description">Si no tienes suerte y gente que te ayude en el camino, nunca llegarás a ser el mejor (Zidane)</p>
+              <p><a class="slider btn btn-primary" aria-label="about-us">Registrate en nuestras instalaciones</a></p>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+
+<section class="call-to-action-box no-padding">
+  <div class="container">
+    <div class="action-style-box">
+        <div class="row align-items-center">
+          <div class="col-md-8 text-center text-md-left">
+              <div class="call-to-action-text">
+                <h3 class="action-title">Ven a divertirte</h3>
+              </div>
+          </div><!-- Col end -->
+          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
+              <div class="call-to-action-btn">
+                <a class="btn btn-dark" href="#">Más información</a>
+              </div>
+          </div><!-- col end -->
+        </div><!-- row end -->
+    </div><!-- Action style box -->
+  </div><!-- Container end -->
+</section><!-- Action end -->
+
+<section id="ts-features" class="ts-features">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="ts-intro">
+              <h2 class="into-title">Siempre queremos verte triunfar</h2>
+              <h3 class="into-sub-title">¿Quiénes somos?</h3>
+              <p>Todos somos una familia y queremos que tú tambien seas parte de nosotoros, ¡Ven y diviertete!.</p>
+          </div><!-- Intro box end -->
+
+          <div class="gap-20"></div>
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-trophy"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">Gana una hora de juego gratis</h3>
+                    </div>
+                </div><!-- Service 1 end -->
+              </div><!-- col end -->
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-sliders-h"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">Mietras mas acumulas más ganas</h3>
+                    </div>
+                </div><!-- Service 2 end -->
+              </div><!-- col end -->
+          </div><!-- Content row 1 end -->
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-thumbs-up"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">Déjanos tu experiencia</h3>
+                    </div>
+                </div><!-- Service 1 end -->
+              </div><!-- col end -->
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-users"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">Registrate para conocer mas</h3>
+                    </div>
+                </div><!-- Service 2 end -->
+              </div><!-- col end -->
+          </div><!-- Content row 1 end -->
+        </div><!-- Col end -->
+
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <h3 class="into-sub-title">Tambien contamos con:</h3>
+          <p>Venta de consumo diario, articulos deportivos, antojitos los fines de semana y mucho más!</p>
+
+          <div class="accordion accordion-group" id="our-values-accordion">
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Visitanos
+                      </button>
+                    </h2>
+                </div>
+              
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#our-values-accordion">
+                    <div class="card-body">
+                      Estamos ubicados en Kilómetro 236 Aldea Santa Irene San Antonio Sacatepéquez, Guatemala
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Registrate
+                      </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
+                    <div class="card-body">
+                      Ven a nuestras instalaciones para conocer mas de nuestros beneficios
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Campeonatos
+                      </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#our-values-accordion">
+                    <div class="card-body">
+                      Gracias a nuestros patrocinadores tu puedes ser la máxima figura de tu club
+                    </div>
+                </div>
+              </div>
+          </div>
+          <!--/ Accordion end -->
+
+        </div><!-- Col end -->
+    </div><!-- Row end -->
+  </div><!-- Container end -->
+</section><!-- Feature are end -->
+
+<section id="facts" class="facts-area dark-bg">
+  <div class="container">
+    <div class="facts-wrapper">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 ts-facts">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="{% static 'images/favicon.png' %}" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="1789">5800</span></h2>
+                <h3 class="ts-facts-title">Total Juegos</h3>
+              </div>
+          </div><!-- Col end -->
+
+          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="{% static 'images/copa.png' %}" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="647">10</span></h2>
+                <h3 class="ts-facts-title">Campeonatos</h3>
+              </div>
+          </div><!-- Col end -->
+
+          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="{% static 'images/like.png' %}" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="4000">0</span></h2>
+                <h3 class="ts-facts-title">Me gusta</h3>
+              </div>
+          </div><!-- Col end -->
+
+          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="{% static 'images/x.png' %}" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="44">0</span></h2>
+                <h3 class="ts-facts-title">Malas Experiencias</h3>
+              </div>
+          </div><!-- Col end -->
+
+        </div> <!-- Facts end -->
+    </div>
+    <!--/ Content row end -->
+  </div>
+  <!--/ Container end -->
+</section><!-- Facts end -->
+
+
+<!--/ News end -->
+
+  <footer id="footer" class="footer bg-overlay">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-4 col-md-6 footer-widget footer-about">
+            <h3 class="widget-title">Ubicanos</h3>
+            <img loading="lazy" width="200px" class="footer-logo" src="{% static 'images/P.jpg' %}" alt="Constra">
+            <p>Kilómetro 236 Aldea Santa Irene San Antonio Sacatepéquez, Guatemala</p>
+            <div class="footer-social">
+              <ul>
+                <li><a href="https://facebook.com" aria-label="Facebook"><i
+                      class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="https://instagram.com" aria-label="Instagram"><i
+                      class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com" aria-label="Github"><i class="fab fa-github"></i></a></li>
+              </ul>
+            </div><!-- Footer social end -->
+          </div><!-- Col end -->
+
+          <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+            <h3 class="widget-title">Horarios</h3>
+            <div class="working-hours">
+              Estamos para servirte los 7 dias de la semana.
+              <br><br> Lunes - Viernes: <span class="text-right">08:00 - 20:00 </span>
+              <br> Sábados: <span class="text-right">08:00 - 21:00</span>
+              <br> Domingos y dias festivivos: <span class="text-right">12:00 - 20:00</span>
+            </div>
+          </div><!-- Col end -->
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+            <h3 class="widget-title">Servicios</h3>
+            <ul class="list-arrow">
+              <li><a href="{% url 'home' %}">Alquiler de cancaha sintética</a></li>
+              <li><a href="{% url 'home' %}">Campeonatos</a></li>
+              <li><a href="{% url 'home' %}">Eventos Sociales</a></li>
+              <li><a href="{% url 'home' %}">Eventos Religios</a></li>
+              <li><a href="{% url 'home' %}">Y más</a></li>
+            </ul>
+          </div><!-- Col end -->
+        </div><!-- Row end -->
+      </div><!-- Container end -->
+    </div><!-- Footer main end -->
+
+    <div class="copyright">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="copyright-info text-center text-md-left">
+              <span>Copyright &copy; <script>
+                  document.write(new Date().getFullYear())
+                </script>, Universidad Maririano Gálvez de Guatemala &amp; (8vo. Ciclo) <a href="https://themefisher.com">Desarrollo Web</a></span>
+            </div>
+          </div>
+
+         
+        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+          <button class="btn btn-primary" title="Back to Top">
+            <i class="fa fa-angle-double-up"></i>
+          </button>
+        </div>
+
+      </div><!-- Container end -->
+    </div><!-- Copyright end -->
+  </footer><!-- Footer end -->
+
+
+  <!-- Javascript Files
+  ================================================== -->
+
+  <!-- initialize jQuery Library -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap jQuery -->
+  <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+  <!-- Slick Carousel -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/slick/slick-animation.min.js"></script>
+  <!-- Color box -->
+  <script src="plugins/colorbox/jquery.colorbox.js"></script>
+  <!-- shuffle -->
+  <script src="plugins/shuffle/shuffle.min.js" defer></script>
+
+
+  <!-- Google Map API Key-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+  <!-- Google Map Plugin-->
+  <script src="plugins/google-map/map.js" defer></script>
+
+  <!-- Template custom -->
+  <script src="js/script.js"></script>
+
+  </div><!-- Body inner end -->
+  </body>
+
+  </html>
